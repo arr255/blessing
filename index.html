@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Cn">
+    <head>
+        <title>blessing</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device=width-device,initial-scale=0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>      
+    </head>
+    <body class="container">
+        <div class="jumbotron">
+            <h2 class="text-info">新年快乐</h2>
+                <form class="form-horizontal" method="POST" action="sendmail/sendmail.php" name="info">
+                    <div class="input-group col-sm-9">
+                        <label class="col-sm-2 control-label">邮箱</label>
+                        <div class="col-sm-10">
+                            <input type="email" name="frommail" class="form-control" placeholder="请输入您的邮箱(仅支持163邮箱)" required>
+                        </div>
+                        <label class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" name="password" class="form-control" placeholder="请输入您的邮箱密码" required>
+                        </div>
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <textarea name="message" class="form-control" rows="10" placeholder="写下你的新年祝福吧">
+                                </textarea>
+                        </div>
+                        <label class="col-sm-2 control-label">图片</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="pic" class="form-control" placeholder="请选择您要发送的图片(非必须)" disabled>
+                        </div>
+                        <label class="col-sm-2 control-label">文件</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="file" class="form-control" placeholder="请选择您要发送的附件（非必须）" disabled>
+                        </div>
+                        <label class="col-sm-2 control-label">收信人邮箱</label>
+                        <div class="col-sm-10" id="tomail">
+                            <input type="email" name="tomail_1" class="form-control" placeholder="请输入收信人的邮箱">                         
+                        </div>
+                        <div class="col-sm-4 col-sm-offset-2 btn-group">
+                            <input type="button" class="btn btn-default" value="+" onclick="add()">
+                            <input type="button" class="btn btn-default" value="-" onclick="minus()">
+                        </div>
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <input type="submit" class="btn btn-success btn-block" value="我写好了">
+                        </div>
+                </form>
+        </div>
+        <footer>
+                <p style="text-align: center">Copyright &copy; 2018 <b>郭梦飞</b> All Rights Reserved</p>
+            </footer>
+    </body>
